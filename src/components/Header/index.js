@@ -50,7 +50,8 @@ class Header extends Component {
   };
 
   componentDidMount() {
-    const windowGlobal = typeof window !== 'undefined' && window;
+    const currentPathname = location.pathname;
+    console.log(currentPathname);
   }
 
   render() {
@@ -64,9 +65,7 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            {['/', '/blog'].indexOf(windowGlobal.location.pathname) === -1 && (
-              <Button onClick={this.handleLogin('login')}>Edit</Button>
-            )}
+            <Button onClick={this.handleLogin('login')}>Edit</Button>
           </Navigation>
         </Right>
       </HeaderWrapper>
