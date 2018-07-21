@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import Link from 'gatsby-link';
-import { Grid, Typography, IconButton } from 'material-ui';
-import ArrowLeft from 'mdi-material-ui/ArrowLeft';
+import { Grid, Typography } from 'material-ui';
 import gql from 'graphql-tag';
 import styled from '../utils/styled';
 import Section from '../components/Section';
@@ -47,9 +46,6 @@ class Post extends Component {
         <Article item xs={12} sm={8}>
           <ArticleTitle>
             <Typography variant="display1">{post.title}</Typography>
-            <IconButton component={Link} to="/blog">
-              <ArrowLeft />
-            </IconButton>
           </ArticleTitle>
           <Placeholder>
             <ArticleImage
