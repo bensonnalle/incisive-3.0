@@ -43,7 +43,7 @@ const NavButton = styled(Button, { component: Link })(theme => ({
 const AddButton = styled(Button)(theme => ({
   size: 'small',
 }));
-const location = window.location;
+const windowGlobal = typeof window !== 'undefined' && window;
 
 class Header extends Component {
   handleLogin = type => () => {
@@ -60,7 +60,7 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            {['/', '/blog'].indexOf(location.pathname) === -1 && (
+            {['/', '/blog'].indexOf(windowGlobal.location.pathname) === -1 && (
               <Button onClick={this.handleLogin('login')}>Edit</Button>
             )}
           </Navigation>
