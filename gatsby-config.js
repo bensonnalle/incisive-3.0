@@ -18,21 +18,13 @@ module.exports = {
         token: process.env.GATSBY_GRAPHQLCMS_TOKEN,
         // Get all remote data
         query: `{
-          allPosts {
+          allposts {
             id
             slug
             title
             content
-            dateAndTime
+            updatedAt
             coverImage {
-              handle
-            }
-          }
-          allAuthors {
-            id
-            name
-            bibliography
-            avatar {
               handle
             }
           }
