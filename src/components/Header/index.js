@@ -39,6 +39,7 @@ const Navigation = styled('nav')(theme => ({
 }));
 const NavButton = styled(Button, { component: Link })(theme => ({
   color: 'error',
+  marginLeft: 10,
 }));
 const AddButton = styled(Button)(theme => ({
   size: 'small',
@@ -65,7 +66,9 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            <Button onClick={this.handleLogin('login')}>Edit</Button>
+            <Button style={{
+              marginRight: 10,
+            }} onClick={this.handleLogin('login')}>Edit</Button>
           </Navigation>
         </Right>
       </HeaderWrapper>

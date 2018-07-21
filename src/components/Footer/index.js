@@ -49,10 +49,6 @@ const Caption = styled(Typography, { variant: 'caption' })(theme => ({
     lineHeight: '40px',
   },
 }));
-const FooterLogo = styled('img')(theme => ({
-  height: 80,
-  padding: '0 1rem',
-}));
 
 class Footer extends Component {
   handleLogin = type => () => {
@@ -62,19 +58,14 @@ class Footer extends Component {
     const { data: { site } } = this.props;
     return (
       <FooterWrapper>
-        <Left item xs={12} sm={5}>
+        <Left item xs={12} sm={6}>
           <Caption>
             &copy; 2018 {site.siteMetadata.title}
             {` | `}
-            <a onClick={this.handleLogin('login')}>Login</a>
+            <a onClick={this.handleLogin('login')}>Edit</a>
           </Caption>
         </Left>
-        <Middle item xs={12} sm={2}>
-          <Link to="/">
-            <FooterLogo src={logoImage} alt={site.siteMetadata.title} />
-          </Link>
-        </Middle>
-        <Right item xs={12} sm={5}>
+        <Right item xs={12} sm={6}>
           <Caption>
             <FooterLink to="/privacy-policy">
               <Typography variant="caption">Privacy Policy</Typography>
