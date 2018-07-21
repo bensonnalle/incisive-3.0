@@ -59,9 +59,11 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            {['/', '/blog'].indexOf(location.pathname) == -1 && (
+            if (location) {
+              {['/', '/blog'].indexOf(location.pathname) == -1 && (
                 <Button onClick={this.handleLogin('login')}>Edit</Button>
-            )}
+              )}
+            }
           </Navigation>
         </Right>
       </HeaderWrapper>
