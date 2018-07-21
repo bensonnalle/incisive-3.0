@@ -43,7 +43,7 @@ const NavButton = styled(Button, { component: Link })(theme => ({
 const AddButton = styled(Button)(theme => ({
   size: 'small',
 }));
-const windowGlobal = typeof window !== 'undefined' && window;
+const currentLocation = typeof location !== 'undefined' && location;
 
 class Header extends Component {
   handleLogin = type => () => {
