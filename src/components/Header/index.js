@@ -43,6 +43,7 @@ const NavButton = styled(Button, { component: Link })(theme => ({
 const AddButton = styled(Button)(theme => ({
   size: 'small',
 }));
+const location = window.location;
 
 class Header extends Component {
   handleLogin = type => () => {
@@ -59,11 +60,9 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            if (location) {
-              {['/', '/blog'].indexOf(location.pathname) === -1 && (
-                <Button onClick={this.handleLogin('login')}>Edit</Button>
-              )}
-            }
+            {['/', '/blog'].indexOf(location.pathname) === -1 && (
+              <Button onClick={this.handleLogin('login')}>Edit</Button>
+            )}
           </Navigation>
         </Right>
       </HeaderWrapper>
