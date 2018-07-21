@@ -43,12 +43,18 @@ const NavButton = styled(Button, { component: Link })(theme => ({
 const AddButton = styled(Button)(theme => ({
   size: 'small',
 }));
-const currentLocation = typeof location !== 'undefined' && location;
 
 class Header extends Component {
   handleLogin = type => () => {
     netlifyIdentity.open(type);
   };
+
+  componentDidMount() {
+    {['/', '/blog'].indexOf(location.pathname) === -1 && (
+      <Button onClick={this.handleLogin('login')}>Edit</Button>
+    )}
+  }
+
   render() {
     const { data: { site } } = this.props;
     return (
@@ -60,9 +66,7 @@ class Header extends Component {
         </Left>
         <Right item xs={12} sm={6}>
           <Navigation>
-            {['/', '/blog'].indexOf(windowGlobal.location.pathname) === -1 && (
-              <Button onClick={this.handleLogin('login')}>Edit</Button>
-            )}
+
           </Navigation>
         </Right>
       </HeaderWrapper>
