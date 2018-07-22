@@ -47,18 +47,7 @@ class Post extends Component {
           <ArticleTitle>
             <Typography variant="display1">{post.title}</Typography>
           </ArticleTitle>
-          <Placeholder>
-            <ArticleImage
-              alt={post.title}
-              src={
-                post.coverImage
-                  ? `https://media.graphcms.com/resize=w:650,h:366,fit:crop/${
-                      post.coverImage.handle
-                    }`
-                  : 'https://via.placeholder.com/650x366'
-              }
-            />
-          </Placeholder>
+          
           <EditableMarkdown
             source={post.content}
             node={post}
@@ -78,9 +67,6 @@ export const query = graphql`
       id
       slug
       title
-      coverImage {
-        handle
-      }
       content
     }
   }

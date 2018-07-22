@@ -15,7 +15,7 @@ const HeaderWrapper = styled(Grid, {
   left: 0,
   width: '100%',
   position: 'fixed',
-  height: '4em',
+  // height: '4em',
   borderBottom: '1px solid',
   borderBottomColor: '#38ef7d',
 }));

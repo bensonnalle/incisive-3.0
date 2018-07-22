@@ -53,20 +53,6 @@ const IndexPage = ({ data }) => {
         <List>
           {data.allPost.edges.map(post => (
             <ListItem key={post.node.id}>
-              <Link to={`/post/${post.node.slug}`}>
-                <Placeholder>
-                  <Thumbnail
-                    alt={post.node.title}
-                    src={
-                      post.node.coverImage
-                        ? `https://media.graphcms.com/resize=w:100,h:100,fit:crop/${
-                            post.node.coverImage.handle
-                          }`
-                        : 'https://via.placeholder.com/100x100'
-                    }
-                  />
-                </Placeholder>
-              </Link>
               <div>
                 <PostTitle to={`/post/${post.node.slug}`}>
                   <Typography variant="title">{post.node.title}</Typography>
@@ -95,9 +81,6 @@ export const query = graphql`
           title
           slug
           content
-          coverImage {
-            handle
-          }
         }
       }
     }

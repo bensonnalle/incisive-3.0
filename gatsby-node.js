@@ -19,9 +19,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               id
               title
               slug
-              coverImage {
-                handle
-              }
               content
             }
           }
