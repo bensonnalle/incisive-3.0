@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import { Grid, Typography } from 'material-ui';
 import logoImage from '../../images/logo.png';
 import styled from '../../utils/styled';
-import netlifyIdentity from 'netlify-identity-widget';
+// import netlifyIdentity from 'netlify-identity-widget';
 
 const FooterWrapper = styled(Grid, {
   component: 'footer',
@@ -11,8 +11,8 @@ const FooterWrapper = styled(Grid, {
   spacing: 16,
   fontSize: '0.75em',
 })(theme => ({
-  background: theme.palette.background.default,
-  padding: `${theme.spacing.unit * 4}px 0`,
+  background: 'white',
+  // padding: `${theme.spacing.unit * 4}px 0`,
   '& a:link, & a:visited': {
     cursor: 'pointer',
     color: 'inherit',
@@ -51,21 +51,11 @@ const Caption = styled(Typography, { variant: 'caption' })(theme => ({
 }));
 
 class Footer extends Component {
-  handleLogin = type => () => {
-    netlifyIdentity.open(type);
-  };
   render() {
     const { data: { site } } = this.props;
     return (
       <FooterWrapper>
-        <Left item xs={12} sm={6}>
-          <Caption>
-            &copy; 2018 {site.siteMetadata.title}
-            {` | `}
-            <a onClick={this.handleLogin('login')}>Edit</a>
-          </Caption>
-        </Left>
-        <Right item xs={12} sm={6}>
+        <Middle item xs={12} sm={12}>
           <Caption>
             <FooterLink to="/privacy-policy">
               <Typography variant="caption">Privacy Policy</Typography>
@@ -75,7 +65,7 @@ class Footer extends Component {
               <Typography variant="caption">Terms of Service</Typography>
             </FooterLink>
           </Caption>
-        </Right>
+        </Middle>
       </FooterWrapper>
     );
   }
