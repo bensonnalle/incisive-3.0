@@ -25,7 +25,8 @@ const FooterWrapper = styled(Grid, {
   },
 }));
 const Left = styled(Grid)(theme => ({
-  textAlign: 'right',
+  textAlign: 'left',
+  marginLeft: 45,
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
   },
@@ -55,8 +56,10 @@ class Footer extends Component {
     const { data: { site } } = this.props;
     return (
       <FooterWrapper>
-        <Middle item xs={12} sm={12}>
+        <Left item xs={12} sm={12}>
           <Caption>
+            &copy; 2018 {site.siteMetadata.title}
+            {` | `}
             <FooterLink to="/privacy-policy">
               <Typography variant="caption">Privacy Policy</Typography>
             </FooterLink>
@@ -65,7 +68,7 @@ class Footer extends Component {
               <Typography variant="caption">Terms of Service</Typography>
             </FooterLink>
           </Caption>
-        </Middle>
+        </Left>
       </FooterWrapper>
     );
   }
