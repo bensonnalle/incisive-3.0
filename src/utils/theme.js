@@ -1,7 +1,5 @@
 // Setup base Material-UI theme
 import createMuiTheme from 'material-ui/styles/createMuiTheme';
-import purple from 'material-ui/colors/purple';
-import green from 'material-ui/colors/green';
 import red from 'material-ui/colors/red';
 import grey from 'material-ui/colors/grey';
 
@@ -10,8 +8,12 @@ const bodyFont = `"Open Sans", Roboto, "Helvetica Neue", Arial, sans-serif`;
 
 export default createMuiTheme({
   palette: {
-    primary: purple,
-    secondary: green,
+    primary: {
+      main: '#38ef7d',
+    },
+    secondary: {
+      main: '#ffffff',
+    },
     error: red,
   },
   typography: {

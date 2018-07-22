@@ -9,35 +9,7 @@ import Button from '../components/Button';
 import Section from '../components/Section';
 
 const content = `
-De commodo exquisitaque. Ut magna labore nam litteris, nulla se cupidatat de
-constias elit sed laborum illustriora ut malis incurreret fidelissimae. Fabulas
-et cernantur.Aliqua admodum ita quid sint. Noster cupidatat ingeniis, ad hic
-labore ingeniis, quis vidisse ubi labore tempor, ita quem offendit probant. Aut
-illum cillum minim consequat ea legam te iis fore consequat.
-
-De commodo exquisitaque. Ut magna labore nam litteris, nulla se cupidatat de
-constias elit sed laborum illustriora ut malis incurreret fidelissimae. Fabulas
-et cernantur.Aliqua admodum ita quid sint. Noster cupidatat ingeniis, ad hic
-labore ingeniis, quis vidisse ubi labore tempor, ita quem offendit probant. Aut
-illum cillum minim consequat ea legam te iis fore consequat.
-
-De commodo exquisitaque. Ut magna labore nam litteris, nulla se cupidatat de
-constias elit sed laborum illustriora ut malis incurreret fidelissimae. Fabulas
-et cernantur.Aliqua admodum ita quid sint. Noster cupidatat ingeniis, ad hic
-labore ingeniis, quis vidisse ubi labore tempor, ita quem offendit probant. Aut
-illum cillum minim consequat ea legam te iis fore consequat.
-
-De commodo exquisitaque. Ut magna labore nam litteris, nulla se cupidatat de
-constias elit sed laborum illustriora ut malis incurreret fidelissimae. Fabulas
-et cernantur.Aliqua admodum ita quid sint. Noster cupidatat ingeniis, ad hic
-labore ingeniis, quis vidisse ubi labore tempor, ita quem offendit probant. Aut
-illum cillum minim consequat ea legam te iis fore consequat.
-
-De commodo exquisitaque. Ut magna labore nam litteris, nulla se cupidatat de
-constias elit sed laborum illustriora ut malis incurreret fidelissimae. Fabulas
-et cernantur.Aliqua admodum ita quid sint. Noster cupidatat ingeniis, ad hic
-labore ingeniis, quis vidisse ubi labore tempor, ita quem offendit probant. Aut
-illum cillum minim consequat ea legam te iis fore consequat.
+Mosaic is a website where anyone can contribute investment insight to a mosaic on a specific company or another topic. 
 `;
 
 const Home = ({ data }) => {
@@ -45,7 +17,7 @@ const Home = ({ data }) => {
     <Section>
       <Grid item xs={12} sm={8}>
         <Helmet title="Home" />
-        <Typography variant="display1">Home</Typography>
+        <Typography variant="display1">Welcome to Mosaic</Typography>
         <Typography component={Markdown} source={content} />
       </Grid>
     </Section>

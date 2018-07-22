@@ -282,8 +282,10 @@ class EditableMarkdown extends Component {
                   <Button
                     style={{
                       marginRight: 5,
+                      // color: '#38ef7d',
                     }}
                     variant="fab"
+                    color="secondary"
                     disabled={
                       editorState.getCurrentContent() ===
                       originalEditorState.getCurrentContent()
@@ -295,6 +297,7 @@ class EditableMarkdown extends Component {
                   <Button
                     style={{
                       marginLeft: 5,
+                      // color: '#38ef7d',
                     }}
                     variant="fab"
                     color="secondary"
