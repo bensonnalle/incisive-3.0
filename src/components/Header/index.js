@@ -15,6 +15,7 @@ const HeaderWrapper = styled(Grid, {
   // height: '4em',
   borderBottom: '1px solid',
   borderBottomColor: '#38ef7d',
+  zIndex: 2,
 }));
 const Left = styled(Grid)(theme => ({
   textAlign: 'left',

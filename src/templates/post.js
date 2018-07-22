@@ -47,11 +47,13 @@ class Post extends Component {
           <ArticleTitle>
             <Typography variant="display1">{post.title}</Typography>
           </ArticleTitle>
-          
           <EditableMarkdown
             source={post.content}
             node={post}
             mutation={UPDATE_POST}
+            style={{
+              zIndex: 1,
+            }}
           />
         </Article>
       </Section>

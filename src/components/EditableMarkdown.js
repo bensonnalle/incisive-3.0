@@ -34,16 +34,16 @@ const Wrapper = styled('div')(theme => ({
     marginTop: '1em',
   },
   marginRight: -2,
-  borderRight: `2px solid ${theme.palette.secondary[100]}`,
+  // borderRight: `2px solid ${theme.palette.secondary[100]}`,
 }));
 
 const Buttons = styled('div')(theme => ({
-  position: 'absolute',
-  display: 'flex',
-  alignItems: 'center',
-  bottom: -theme.spacing.unit * 8 - 2,
-  right: -2,
-  borderTop: `2px solid ${theme.palette.secondary[100]}`,
+  position: 'fixed',
+  // display: 'flex',
+  // alignItems: 'center',
+  bottom: 60,
+  right: 40,
+  // borderTop: `2px solid ${theme.palette.secondary[100]}`,
 }));
 
 const blockRenderMap = Immutable.Map({
@@ -279,7 +279,11 @@ class EditableMarkdown extends Component {
                   ]}
                 />
                 <Buttons>
-                  <IconButton
+                  <Button
+                    style={{
+                      marginRight: 5,
+                    }}
+                    variant="fab"
                     disabled={
                       editorState.getCurrentContent() ===
                       originalEditorState.getCurrentContent()
@@ -287,8 +291,12 @@ class EditableMarkdown extends Component {
                     onClick={this.handleReset}
                   >
                     <History />
-                  </IconButton>
-                  <IconButton
+                  </Button>
+                  <Button
+                    style={{
+                      marginLeft: 5,
+                    }}
+                    variant="fab"
                     color="secondary"
                     disabled={
                       editorState.getCurrentContent() ===
@@ -297,7 +305,7 @@ class EditableMarkdown extends Component {
                     onClick={this.handleSave({ updateNode })}
                   >
                     <ContentSave />
-                  </IconButton>
+                  </Button>
                 </Buttons>
               </Wrapper>
             );
