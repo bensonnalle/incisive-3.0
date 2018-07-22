@@ -69,6 +69,8 @@ class Footer extends Component {
             </FooterLink>
           </Caption>
         </Left>
+        <Middle item xs={0} sm={4}></Middle>
+        <Right item xs={0} sm={4}></Right>
       </FooterWrapper>
     );
   }
