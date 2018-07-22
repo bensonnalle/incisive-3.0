@@ -11,9 +11,6 @@ const HeaderWrapper = styled(Grid, {
   padding: 16,
 })(theme => ({
   background: 'white',
-  top: 0,
-  left: 0,
-  width: '100%',
   position: 'fixed',
   // height: '4em',
   borderBottom: '1px solid',
@@ -39,7 +36,7 @@ const Navigation = styled('nav')(theme => ({
 }));
 const NavButton = styled(Button, { component: Link })(theme => ({
   color: 'error',
-  marginLeft: 10,
+  marginLeft: 45,
 }));
 const AddButton = styled(Button)(theme => ({
   size: 'small',
@@ -59,15 +56,16 @@ class Header extends Component {
     const { data: { site } } = this.props;
     return (
       <HeaderWrapper>
-        <Left item xs={12} sm={6}>
+        <Left item xs={6} sm={6}>
           <Navigation>
             <NavButton to="/">Mosaic </NavButton>
           </Navigation>
         </Left>
-        <Right item xs={12} sm={6}>
+        <Right item xs={6} sm={6}>
           <Navigation>
             <Button style={{
-              marginRight: 10,
+              marginRight: 45,
+              boxShadow: "none",
             }} onClick={this.handleLogin('login')}>Edit</Button>
           </Navigation>
         </Right>

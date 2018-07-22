@@ -56,7 +56,7 @@ const Main = styled('main')(theme => ({
   padding: `0 ${theme.spacing.unit * 2}px`,
 }));
 const Wrapper = styled('div')(theme => ({
-  padding: `0 ${theme.spacing.unit * 2}px`,
+  // padding: `0 ${theme.spacing.unit * 2}px`,
 }));
 
 class App extends Component {
