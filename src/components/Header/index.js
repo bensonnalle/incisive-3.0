@@ -71,7 +71,7 @@ class Header extends Component {
             <Button style={{
               marginRight: 10,
               boxShadow: "none",
-            }} to="/add">Add</Button>
+            }} to="/add/">Add</Button>
           </Navigation>
         </Right>
       </HeaderWrapper>
