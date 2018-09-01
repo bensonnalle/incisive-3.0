@@ -29,12 +29,15 @@ const ArticleTitle = styled('div')(theme => ({
 }));
 
 const UPDATE_POST = gql`
-  mutation($id: ID!, $content: String!) {
-    updatePost(id: $id, content: $content) {
-      id
-      content
-    }
-  }
+mutation($id: ID!, $content: String!) {
+updateAllpost(
+      data: {content: $content},
+      where: {id: $id}) {
+  id
+  slug
+  content
+}
+}
 `;
 
 class Post extends Component {
