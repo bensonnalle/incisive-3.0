@@ -68,10 +68,10 @@ class Header extends Component {
               marginRight: 0,
               boxShadow: "none",
             }} onClick={this.handleLogin('login')}>Edit</Button>
-            <Button to="/add/" style={{
+            <NavButton to="/add" style={{
               marginRight: 10,
               boxShadow: "none",
-            }}>Add</Button>
+            }}>Add</NavButton>
           </Navigation>
         </Right>
       </HeaderWrapper>
