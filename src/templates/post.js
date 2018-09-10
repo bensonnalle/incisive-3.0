@@ -46,7 +46,7 @@ class Post extends Component {
     const post = data.post;
     return (
       <Section>
-        <Article item xs={12} sm={8}>
+        <Article item xs={12} sm={10}>
           <ArticleTitle>
             <Typography variant="display1">{post.title}</Typography>
           </ArticleTitle>

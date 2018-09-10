@@ -18,7 +18,7 @@ export default createMuiTheme({
   },
   typography: {
     fontFamily: bodyFont,
-    fontSize: 14, // default
+    fontSize: 17,
     // color: grey[500],
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -35,8 +35,9 @@ export default createMuiTheme({
     title: { fontFamily: headlineFont, color: grey[900], fontWeight: 400 },
     body1: {
       fontFamily: bodyFont,
-      color: grey[700],
+      color: grey[900],
       fontWeight: 400,
+      lineHeight: 1.6,
       margin: '1em 0',
       '& h2': { fontFamily: headlineFont, color: grey[900], fontWeight: 400 },
       '& h3': { fontFamily: headlineFont, color: grey[900], fontWeight: 400 },
