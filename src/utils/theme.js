@@ -18,7 +18,7 @@ export default createMuiTheme({
   },
   typography: {
     fontFamily: bodyFont,
-    fontSize: 17,
+    fontSize: 14, // adjusts font across site including button labels
     // color: grey[500],
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -35,6 +35,7 @@ export default createMuiTheme({
     title: { fontFamily: headlineFont, color: grey[900], fontWeight: 400 },
     body1: {
       fontFamily: bodyFont,
+      fontSize: 19, // only adjusts size of mosaic text excludes buttons
       color: grey[900],
       fontWeight: 400,
       lineHeight: 1.6,
