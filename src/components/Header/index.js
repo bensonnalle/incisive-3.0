@@ -46,6 +46,7 @@ const AddButton = styled(Button)(theme => ({
 class Header extends Component {
   handleLogin = type => () => {
     netlifyIdentity.open(type);
+    mixpanel.track("Edit Button Clicked");
   };
 
   componentDidMount() {
