@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Markdown from 'react-markdown';
 import Helmet from 'react-helmet';
@@ -7,40 +7,28 @@ import gql from 'graphql-tag';
 import styled from '../utils/styled';
 import Button from '../components/Button';
 import Section from '../components/Section';
+import SubmissionForm from '../components/SubmissionForm';
 
-const SubmissionForm = () => (
-  <div>
-    <form method="POST" action="https://formspree.io/bennalle1@gmail.com">
-      <div>
-        <InputLabel>Mosaic Title</InputLabel>
-        <br></br>
-        <Input name="mosaicTitle" style = {{width: 600}}></Input>
-      </div>
-      <br></br>
-      <div>
-        <InputLabel>Mosaic Content</InputLabel>
-        <br></br>
-        <TextField
-          multiline
-          rows="10"
-          style = {{width: 600}}
-          name="content"
-        />
-      </div>
-      <br></br>
-      <div>
-        <InputLabel>Your Email</InputLabel>
-        <br></br>
-        <Input name="contributorEmail" style = {{width: 600}}></Input>
-      </div>
-      <br></br>
-      <div>
-        <Button type="submit" variant="outlined">Submit</Button>
-      </div>
-    </form>
-  </div>
-);
+class Add extends Component {
+  componentDidMount() {
+    mixpanel.track("Add Page Visited");
+  }
 
+  render() {
+    return (
+      <Section>
+        <Grid item xs={12} sm={8}>
+          <Helmet title="Add Mosaic" />
+          <Typography variant="display1">Please Enter the Following Fields</Typography>
+          <br></br>
+          <SubmissionForm style={{margin: '0 auto'}}></SubmissionForm>
+        </Grid>
+      </Section>
+    );
+  }
+}
+
+/*
 const Add = ({ data }) => {
   return (
     <Section>
@@ -53,4 +41,5 @@ const Add = ({ data }) => {
     </Section>
   );
 };
+*/
 export default Add;
