@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import { Grid, Button, IconButton, Typography } from 'material-ui';
 import Plus from 'mdi-material-ui/Plus';
+import SearchIcon from 'mdi-material-ui/magnify';
 import styled from '../../utils/styled';
 import netlifyIdentity from 'netlify-identity-widget';
 
 const HeaderWrapper = styled(Grid, {
   component: 'header',
   container: true,
-  padding: 16,
+  // padding: 16,
 })(theme => ({
   background: 'white',
   position: 'fixed',
@@ -33,7 +34,7 @@ const Right = styled(Grid)(theme => ({
   },
 }));
 const Navigation = styled('nav')(theme => ({
-  padding: `${theme.spacing.unit * 1.5}px 0`,
+  padding: `${theme.spacing.unit * 0.8}px 0`,
 }));
 const NavButton = styled(Button, { component: Link })(theme => ({
   color: 'error',
@@ -65,14 +66,20 @@ class Header extends Component {
         </Left>
         <Right item xs={6} sm={6}>
           <Navigation>
-            <Button style={{
-              marginRight: 0,
+            <IconButton href="/search" style={{
+              marginRight: 10,
+            }}>
+              <SearchIcon></SearchIcon>
+            </IconButton>
+            <IconButton href="/add" style={{
+              marginRight: 10,
+            }}>
+              <Plus></Plus>
+            </IconButton>
+            <Button size="small" style={{
+              marginRight: 15,
               boxShadow: "none",
             }} onClick={this.handleLogin('login')}>Edit</Button>
-            <NavButton to="/add" style={{
-              marginRight: 10,
-              boxShadow: "none",
-            }}>Add</NavButton>
           </Navigation>
         </Right>
       </HeaderWrapper>

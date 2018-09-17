@@ -31,7 +31,7 @@ const TrendingList = ({ data }) => {
 };
 
 const about = `
-Don't be afraid to edit or add a new mosaic. Mosaic thrives on the contributions made by everyone around the world. Just be sure to link to a refrence when you add new facts.
+Don't be afraid to edit or [add a new mosaic](/add). Mosaic thrives on the contributions made by everyone around the world. Just be sure to link to a refrence when you add new facts.
 `;
 
 const content = `
