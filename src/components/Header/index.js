@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import { Grid, Button, IconButton, Typography } from 'material-ui';
 import Plus from 'mdi-material-ui/Plus';
-import SearchIcon from 'mdi-material-ui/Plus';
+import SearchIcon from 'mdi-material-ui/Magnify';
 import styled from '../../utils/styled';
 import netlifyIdentity from 'netlify-identity-widget';
 
